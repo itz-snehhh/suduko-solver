@@ -41,7 +41,7 @@ export default function Home() {
         } else {
           setError('No solution exists for this puzzle or solving timed out!');
         }
-      } catch (err) {
+      } catch {
         setError('An error occurred while solving the puzzle.');
       } finally {
         setIsSolving(false);
@@ -128,10 +128,10 @@ export default function Home() {
               <ul className="space-y-2 text-sm text-gray-600">
                 <li>• Click on any empty cell to edit it</li>
                 <li>• Type numbers 1-9 or use Backspace to clear</li>
-                <li>• Use the "Solve" button to automatically solve the puzzle</li>
-                <li>• "Reset" generates a new random puzzle</li>
-                <li>• "Load Prefilled" loads a classic Sudoku puzzle</li>
-                <li>• "Clear Board" starts with an empty grid</li>
+                <li>• Use the Solve button to automatically solve the puzzle</li>
+                <li>• Reset generates a new random puzzle</li>
+                <li>• Load Prefilled loads a classic Sudoku puzzle</li>
+                <li>• Clear Board starts with an empty grid</li>
                 <li className="text-xs text-gray-500 mt-4">
                   <strong>Color coding:</strong> Original numbers are blue, solved numbers are green
                 </li>

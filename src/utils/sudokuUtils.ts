@@ -187,15 +187,4 @@ export function generateRandomSudoku(): SudokuGrid {
   return puzzle;
 }
 
-// Fill a 3x3 box with random numbers
-function fillBox(grid: SudokuGrid, startRow: number, startCol: number): void {
-  const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-  
-  for (let i = 0; i < 3; i++) {
-    for (let j = 0; j < 3; j++) {
-      const randomIndex = Math.floor(Math.random() * numbers.length);
-      grid[startRow + i][startCol + j] = numbers[randomIndex];
-      numbers.splice(randomIndex, 1);
-    }
-  }
-} 
+
